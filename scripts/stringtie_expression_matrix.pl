@@ -148,7 +148,7 @@ sub get_trans_data{
         next unless ($entry[2] eq 'transcript');
         my $trans_id;
         my $exp;
-        if($entry[8] =~ /gene_id\s+\"(ERCC\S+)\"\;/){
+        if ($entry[8] =~ /gene_id\s+\"(\S+)\"\;/){
             $trans_id = $1;
         }elsif ($entry[8] =~ /transcript_id\s+\"(\w+)\"\;/){
             $trans_id = $1;
